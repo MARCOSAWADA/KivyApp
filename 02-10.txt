@@ -1,0 +1,6 @@
+abre o visual studio code
+
+abre o terminal e digite:
+pip install "kivy[base]" kivy_examples
+ENTER
+
