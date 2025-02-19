@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerta Editável</title>
+    <style>
+        .alert-box {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px;
+            background-color: #f9f9f9;
+            position: relative;
+        }
+        .alert-content {
+            display: inline-block;
+        }
+        .edit-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="alert-box">
+    <span class="alert-content" id="alert-text">Este é um alerta editável!</span>
+    <button class="edit-btn" onclick="editarAlerta()">Editar</button>
+</div>
+
+<script>
+    function editarAlerta() {
+        let alertText = document.getElementById("alert-text");
+        let newText = prompt("Edite o alerta:", alertText.textContent);
+        
+        if (newText !== null && newText !== "") {
+            alertText.textContent = newText;
+        }
+    }
+</script>
+
+</body>
+</html>
